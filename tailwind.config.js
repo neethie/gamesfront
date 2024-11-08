@@ -36,6 +36,7 @@ export default {
                 },
                 black: {
                     main: "#141415",
+                    secondary: "#28242c",
                 },
             },
             borderColor: {
@@ -51,6 +52,10 @@ export default {
                     800: "#52527b",
                     900: "#454663",
                     950: "#2d2d3e",
+                },
+                black: {
+                    main: "#141415",
+                    secondary: "#28242c",
                 },
             },
         },

@@ -42,12 +42,13 @@ export default function Sliders({ index }: SlidersProps) {
         >
             {sliderIndex === index && (
                 <>
-                    <h2 className="text-2xl">{game.name}</h2>
-                    <p className="text-xs col-start-1 w-2/3">
+                    <h2 className="text-2xl z-[70]">{game.name}</h2>
+                    <p className="text-xs col-start-1 w-2/3 z-[70]">
                         {game.description}
                     </p>
                 </>
             )}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black to-transparent opacity-70 z-[60]"></div>
         </div>
     );
 }

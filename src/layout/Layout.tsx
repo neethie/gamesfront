@@ -1,21 +1,25 @@
 import { Outlet } from "react-router-dom";
 
 import Header from "./header/Header";
-import Sidebar from "./sidebar/Sidebar";
+import Sidebar from "./sidebar/newSidebar";
 
 export default function Layout() {
-    const gridTemplate = {
+    const gridStyle = {
         display: "grid",
-        gridTemplateColumns: "auto 1fr",
-        gridTemplateRows: "1fr auto",
+        gridTemplateColumns: "200px 1fr",
+        gridTemplateRows: "auto 1fr",
+        gridTemplateAreas: `
+        "aside header"
+        "aside main"
+    `,
     };
 
     return (
-        <div style={gridTemplate}>
-            <Header />
+        <div style={gridStyle}>
             <Sidebar />
+            <Header />
 
-            <div className="overflow-y-hidden p-4">
+            <div className="overflow-y-hidden p-4" style={{ gridArea: "main" }}>
                 <Outlet />
             </div>
         </div>

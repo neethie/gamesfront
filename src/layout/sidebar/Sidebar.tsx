@@ -49,26 +49,21 @@ export default function Sidebar() {
                     }
                 )}
             >
-                <div className="z-10 bg-black top-0 left-0 bottom-0 right-0"></div>
                 <div className="space-y-2">
+                    <SidebarButton text="Home" link="/" icon={<FaHome />} />
                     <SidebarButton
-                        text="Game Store"
-                        link="/"
-                        icon={<FaHome />}
+                        text="Tienda"
+                        link="/store"
+                        icon={<FaGamepad />}
                     />
                     <SidebarButton
-                        text="Library"
+                        text="Biblioteca"
                         link="/library"
                         icon={<MdAutoAwesomeMosaic />}
                     />
                     <SidebarButton
-                        text="Community"
-                        link="/community"
-                        icon={<FaGamepad />}
-                    />
-                    <SidebarButton
-                        text="Friends"
-                        link="/friends"
+                        text="Configuración"
+                        link="/settings"
                         icon={<IoMdSettings />}
                     />
                 </div>

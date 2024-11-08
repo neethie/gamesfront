@@ -13,7 +13,7 @@ export default function SearchBar() {
 
     return (
         <form>
-            <div className="flex flex-row items-center border-2 border-scampi-900 rounded-2xl p-2 max-w-max gap-2">
+            <div className="flex flex-row items-center bg-black-secondary rounded-2xl p-2 max-w-max gap-2">
                 <button onClick={handleSearch}>
                     <CiSearch className="w-4 h-4 text-scampi-100" />
                 </button>
