@@ -14,7 +14,7 @@ export default function SidebarButton({
     return (
         <Link
             to={link}
-            className="flex flex-row items-center gap-2 border-l-4 border-transparent hover:transition-all hover:border-scampi-900 hover:text-scampi-900 text-sm px-4 py-1"
+            className="flex flex-row items-center gap-2 border-l-4 border-transparent transition-all  hover:border-scampi-900 hover:text-scampi-900 text-sm font-extralight px-4 py-1"
         >
             {icon} {text}
         </Link>

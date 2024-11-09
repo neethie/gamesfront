@@ -7,7 +7,7 @@ import SidebarButton from "./Sidebar.button";
 export default function Sidebar() {
     return (
         <aside
-            className="py-5 border-r-2 border-black-secondary h-screen"
+            className="py-5 border-r-2 border-black-secondary max-h-screen sticky top-0"
             style={{ gridArea: "aside" }}
         >
             <SteamIcon />

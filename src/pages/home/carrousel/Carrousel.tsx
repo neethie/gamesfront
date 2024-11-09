@@ -4,7 +4,7 @@ import sliderGames from "./sliderGames";
 
 export default function Carrousel() {
     return (
-        <main className="flex justify-center ">
+        <main className="flex justify-center h-[300px]">
             {sliderGames.map((game) => (
                 <Sliders index={game.id} key={game.id} />
             ))}

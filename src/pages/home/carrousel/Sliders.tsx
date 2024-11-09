@@ -38,7 +38,7 @@ export default function Sliders({ index }: SlidersProps) {
                 backgroundImage: `url(${game.banner})`,
             }}
             className={`w-[550px] h-[250px] rounded-2xl bg-cover bg-center p-2
-        flex flex-col justify-end absolute shadow-2xl ${sliderPosition()} cursor-pointer transition-all backdrop-blur`}
+        flex flex-col justify-end absolute shadow-2xl ${sliderPosition()} cursor-pointer transition-all duration-75  backdrop-blur`}
         >
             {sliderIndex === index && (
                 <>

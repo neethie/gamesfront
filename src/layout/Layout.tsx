@@ -19,7 +19,7 @@ export default function Layout() {
             <Sidebar />
             <Header />
 
-            <div className="overflow-y-hidden p-4" style={{ gridArea: "main" }}>
+            <div className=" p-4" style={{ gridArea: "main" }}>
                 <Outlet />
             </div>
         </div>
