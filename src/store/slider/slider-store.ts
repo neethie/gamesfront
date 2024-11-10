@@ -1,17 +1,4 @@
-import { create, StateCreator } from "zustand";
-import { devtools } from "zustand/middleware";
-
-interface State {
-    sliderIndex: number;
-    setSliderIndex: (index: number) => void;
-}
-
-export const useSliderStore = create<State>()(
-    devtools((set) => ({
-        sliderIndex: 1,
-        setSliderIndex: (index) => set({ sliderIndex: index }),
-    }))
-);
+import { StateCreator } from "zustand";
 
 export type SliderSlice = {
     sliderIndex: number;

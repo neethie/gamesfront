@@ -7,6 +7,8 @@ import SteamIcon from "../header/components/icons/SteamIcon";
 import SidebarButton from "./ButtonSidebar";
 
 export default function Sidebar() {
+    const iconStyle = "md:h-6 md:w-6 h-3 w-3";
+
     return (
         <aside
             className="py-5 border-r-2 border-black-secondary h-screen sticky top-0 left-0 w-max flex flex-col items-center bg-black-main"
@@ -18,22 +20,22 @@ export default function Sidebar() {
                 <SidebarButton
                     text="Home"
                     link="/"
-                    icon={<GrHomeRounded className="h-6 w-6" />}
+                    icon={<GrHomeRounded className={iconStyle} />}
                 />
                 <SidebarButton
                     text="Tienda"
                     link="/store"
-                    icon={<IoCartOutline className="h-6 w-6" />}
+                    icon={<IoCartOutline className={iconStyle} />}
                 />
                 <SidebarButton
                     text="Biblioteca"
                     link="/library"
-                    icon={<LuLayoutDashboard className="h-6 w-6" />}
+                    icon={<LuLayoutDashboard className={iconStyle} />}
                 />
                 <SidebarButton
                     text="Amigos"
                     link="/friends"
-                    icon={<LiaUserFriendsSolid className="h-6 w-6" />}
+                    icon={<LiaUserFriendsSolid className={iconStyle} />}
                 />
             </div>
         </aside>

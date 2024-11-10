@@ -3,15 +3,11 @@ import { StateCreator } from "zustand";
 import { USER_OPTIONS } from "../../layout/header/components/user-menu/userOptions";
 
 export type UserSlice = {
-    id: number;
-    user: string;
     isLogged: boolean;
 
-    setLoggedByUser: (user: string) => void;
-    setLoggedByID: (id: number) => void;
-
     isAuthMenuOpen: boolean;
-    setAuthMenu: (isOpen: boolean) => void;
+    authMenu: number;
+    setAuthMenu: (isOpen: boolean, number: number) => void;
 
     setOptionBySelected: (option: number) => void;
 };
@@ -19,18 +15,15 @@ export type UserSlice = {
 export const createUserSlice: StateCreator<UserSlice, [], [], UserSlice> = (
     set
 ) => ({
-    id: 0,
-    user: "invitado",
     isLogged: false,
 
-    setLoggedByUser: (user) => set(() => ({ user, isLogged: true })),
-    setLoggedByID: (id) => set(() => ({ id, isLogged: true })),
-
     isAuthMenuOpen: false,
-    setAuthMenu: (isOpen) =>
-        set(() => {
-            return { isAuthMenuOpen: isOpen };
-        }),
+    authMenu: 0,
+    setAuthMenu: (isOpen, number) =>
+        set(() => ({
+            isAuthMenuOpen: isOpen,
+            authMenu: number,
+        })),
 
     setOptionBySelected: (option) => {
         const { USER_LOGIN, USER_LOGOUT, USER_PROFILE, USER_SETTINGS } =
@@ -47,7 +40,7 @@ export const createUserSlice: StateCreator<UserSlice, [], [], UserSlice> = (
                 console.log("profile");
                 break;
             case USER_LOGIN:
-                set(() => ({ isAuthMenuOpen: true }));
+                set(() => ({ isAuthMenuOpen: true, authMenu: USER_LOGIN }));
                 break;
         }
     },

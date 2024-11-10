@@ -3,6 +3,7 @@ export enum USER_OPTIONS {
     USER_SETTINGS = 1,
     USER_LOGOUT = 2,
     USER_LOGIN = 3,
+    USER_REGISTER = 4,
 }
 
 export const userOptions = [

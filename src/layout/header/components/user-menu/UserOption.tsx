@@ -6,10 +6,11 @@ type UserOptionProps = {
 };
 
 export default function UserOption({ type }: UserOptionProps) {
-    const { setOptionBySelected } = useAppStore();
+    const { setOptionBySelected, toggleUserMenu } = useAppStore();
 
     const handleButton = () => {
         setOptionBySelected(type);
+        toggleUserMenu();
     };
 
     return (
