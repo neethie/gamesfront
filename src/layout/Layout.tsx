@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import Header from "./header/Header";
 import Sidebar from "./sidebar/Sidebar";
+import AuthModal from "../utils/authModal/AuthModal";
 
 export default function Layout() {
     const gridStyle = {
@@ -22,6 +23,8 @@ export default function Layout() {
             <div className=" p-4" style={{ gridArea: "main" }}>
                 <Outlet />
             </div>
+
+            <AuthModal />
         </div>
     );
 }

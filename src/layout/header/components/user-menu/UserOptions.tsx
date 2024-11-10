@@ -3,9 +3,13 @@ import clsx from "clsx";
 import { useAppStore } from "../../../../store/useAppStore";
 
 import UserOption from "./UserOption";
+import { USER_OPTIONS } from "./userOptions";
 
 export default function UserOptions() {
     const { isUserMenuOpen, isLogged } = useAppStore();
+
+    const { USER_LOGIN, USER_LOGOUT, USER_PROFILE, USER_SETTINGS } =
+        USER_OPTIONS;
 
     return (
         <nav
@@ -20,12 +24,12 @@ export default function UserOptions() {
             <ul>
                 {isLogged ? (
                     <>
-                        <UserOption text="Perfil" />
-                        <UserOption text="Configuración" />
-                        <UserOption text="Cerrar Sesión" />
+                        <UserOption type={USER_PROFILE} />
+                        <UserOption type={USER_SETTINGS} />
+                        <UserOption type={USER_LOGOUT} />
                     </>
                 ) : (
-                    <UserOption text="Iniciar Sesión" />
+                    <UserOption type={USER_LOGIN} />
                 )}
             </ul>
         </nav>
