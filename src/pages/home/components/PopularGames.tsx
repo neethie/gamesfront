@@ -1,5 +1,5 @@
-import GameCard from "../../utils/GameCard";
-import HeaderSection from "../../utils/HeaderSection";
+import GameCard from "../../../utils/GameCard";
+import HeaderSection from "../../../utils/HeaderSection";
 
 export default function PopularGames() {
     return (

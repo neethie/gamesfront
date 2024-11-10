@@ -1,73 +1,41 @@
-// Componentes
-import SidebarButton from "./Sidebar.button";
+import { GrHomeRounded } from "react-icons/gr";
+import { IoCartOutline } from "react-icons/io5";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { LiaUserFriendsSolid } from "react-icons/lia";
 
-// Iconos
-import { FaHome } from "react-icons/fa";
-import { MdAutoAwesomeMosaic } from "react-icons/md";
-import { FaGamepad } from "react-icons/fa6";
-import { IoMdSettings } from "react-icons/io";
-import { useUIStore } from "../../store/ui/ui-store";
-
-import { RxHamburgerMenu } from "react-icons/rx";
-
-// Utils
-import clsx from "clsx";
+import SteamIcon from "../header/components/icons/SteamIcon";
+import SidebarButton from "./ButtonSidebar";
 
 export default function Sidebar() {
-    const isSidebarOpen = useUIStore((state) => state.isSidebarOpen);
-    const toggleSidebar = useUIStore((state) => state.toggleSidebar);
-
-    const isMobile = useUIStore((state) => state.isMobile);
-
-    const gridTemplate = {
-        gridColumn: "1",
-        gridRow: "2",
-    };
-
     return (
-        <>
-            {isMobile && (
-                <button className="absolute top-10 left-10 border-2 border-scampi-900 rounded-2xl p-2">
-                    <RxHamburgerMenu className="w-4 h-4" />
-                </button>
-            )}
-            {isSidebarOpen && (
-                <div
-                    className="bg-black bg-opacity-50 h-screen absolute top-0 left-0 w-full z-10"
-                    onClick={toggleSidebar}
-                ></div>
-            )}
-            <aside
-                style={gridTemplate}
-                className={clsx(
-                    "flex flex-col w-[200px] p-4 md:h-max transition-all z-20",
-                    {
-                        "absolute top-0 left-0": isMobile,
-                        "translate-x-0 bg-[#141415]":
-                            isSidebarOpen || !isMobile,
-                        "-translate-x-full": !isSidebarOpen,
-                    }
-                )}
-            >
-                <div className="space-y-2">
-                    <SidebarButton text="Home" link="/" icon={<FaHome />} />
-                    <SidebarButton
-                        text="Tienda"
-                        link="/store"
-                        icon={<FaGamepad />}
-                    />
-                    <SidebarButton
-                        text="Biblioteca"
-                        link="/library"
-                        icon={<MdAutoAwesomeMosaic />}
-                    />
-                    <SidebarButton
-                        text="Configuración"
-                        link="/settings"
-                        icon={<IoMdSettings />}
-                    />
-                </div>
-            </aside>
-        </>
+        <aside
+            className="py-5 border-r-2 border-black-secondary h-screen sticky top-0 left-0 w-max flex flex-col items-center bg-black-main"
+            style={{ gridArea: "aside" }}
+        >
+            <SteamIcon />
+
+            <div className="space-y-6">
+                <SidebarButton
+                    text="Home"
+                    link="/"
+                    icon={<GrHomeRounded className="h-6 w-6" />}
+                />
+                <SidebarButton
+                    text="Tienda"
+                    link="/store"
+                    icon={<IoCartOutline className="h-6 w-6" />}
+                />
+                <SidebarButton
+                    text="Biblioteca"
+                    link="/library"
+                    icon={<LuLayoutDashboard className="h-6 w-6" />}
+                />
+                <SidebarButton
+                    text="Amigos"
+                    link="/friends"
+                    icon={<LiaUserFriendsSolid className="h-6 w-6" />}
+                />
+            </div>
+        </aside>
     );
 }

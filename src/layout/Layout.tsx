@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 
 import Header from "./header/Header";
-import Sidebar from "./sidebar/newSidebar";
+import Sidebar from "./sidebar/Sidebar";
 
 export default function Layout() {
     const gridStyle = {
         display: "grid",
-        gridTemplateColumns: "200px 1fr",
+        gridTemplateColumns: "auto 1fr",
         gridTemplateRows: "auto 1fr",
         gridTemplateAreas: `
         "aside header"

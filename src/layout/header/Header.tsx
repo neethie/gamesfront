@@ -1,11 +1,11 @@
-import SearchBar from "./SearchBar";
-import FavIcon from "./icons/FavIcon";
-import UserIcon from "./icons/UserIcon";
+import SearchBar from "./components/SearchBar";
+import FavIcon from "./components/icons/FavIcon";
+import UserIcon from "./components/UserMenu";
 
 export default function Header() {
     return (
         <header
-            className="flex flex-col md:flex-row items-center justify-between py-4 px-8 gap-2 sticky top-0 z-[100] bg-black-main"
+            className="flex flex-col md:flex-row items-center justify-between py-4 px-8 gap-2 sticky  top-0 z-[100] bg-black-main"
             style={{ gridArea: "header" }}
         >
             <SearchBar />

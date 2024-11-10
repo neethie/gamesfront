@@ -1,7 +1,7 @@
-import Carrousel from "./carrousel/Carrousel";
-import Categories from "./Categories";
-import PopularGames from "./PopularGames";
-import WhishlistGames from "./Wishlist";
+// import Categories from "./components/Categories";
+import PopularGames from "./components/PopularGames";
+import WhishlistGames from "./components/Wishlist";
+import Carrousel from "./components/Carrousel";
 
 export default function Home() {
     return (
@@ -10,7 +10,6 @@ export default function Home() {
             <PopularGames />
             <div className="grid grid-cols-[2fr_1fr] gap-x-6">
                 <WhishlistGames />
-                <Categories />
             </div>
         </div>
     );

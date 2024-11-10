@@ -1,6 +1,6 @@
-import CategoryTag from "../../utils/CategoryTag";
+import CategoryTag from "../../../utils/CategoryTag";
 
-import HeaderSection from "../../utils/HeaderSection";
+import HeaderSection from "../../../utils/HeaderSection";
 
 export default function PopularGames() {
     return (
