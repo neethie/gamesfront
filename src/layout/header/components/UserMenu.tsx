@@ -1,6 +1,6 @@
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import UserOptions from "./user-menu/UserOptions";
 import { useAppStore } from "../../../store/useAppStore";
+import UserOptions from "./user-menu/UserOptions.tsx";
 
 export default function UserIcon() {
     const { isUserMenuOpen, toggleUserMenu } = useAppStore();

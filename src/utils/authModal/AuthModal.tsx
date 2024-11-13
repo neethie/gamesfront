@@ -29,11 +29,11 @@ export default function AuthModal() {
             {isAuthMenuOpen && (
                 <>
                     <div
-                        className="bg-[#000] absolute top-0 left-0 bottom-0 right-0 z-[100] opacity-80 min-h-screen"
+                        className="bg-[#000] fixed inset-0 z-[100] opacity-80 h-screen w-screen"
                         onClick={handleClose}
                     ></div>
                     {authMenu === USER_LOGIN && (
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[101] bg-black-main rounded-2xl grid grid-cols-[1fr_2fr] justify-centers">
+                        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[101] bg-black-main rounded-2xl grid grid-cols-[1fr_2fr] justify-centers">
                             <div className="">
                                 <img
                                     src="https://images7.alphacoders.com/536/536426.png"

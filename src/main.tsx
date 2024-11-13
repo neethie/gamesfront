@@ -6,6 +6,7 @@ import "./index.css";
 import Home from "./pages/home/Home.tsx";
 import Layout from "./layout/Layout.tsx";
 import NotFoundPage from "./pages/notFound/404.tsx";
+import Store from "./pages/store/Store.tsx";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
+            },
+            {
+                path: "/store",
+                element: <Store />,
             },
             {
                 path: "*",

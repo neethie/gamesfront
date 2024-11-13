@@ -1,3 +1,4 @@
+import React from "react";
 import clsx from "clsx";
 
 import { useAppStore } from "../../../../store/useAppStore";
@@ -12,26 +13,28 @@ export default function UserOptions() {
         USER_OPTIONS;
 
     return (
-        <nav
-            className={clsx(
-                "mt-1 absolute bg-black-secondary w-full rounded-md px-2 transition-all",
-                {
-                    "hidden ": !isUserMenuOpen,
-                    "block ": isUserMenuOpen,
-                }
-            )}
-        >
-            <ul>
-                {isLogged ? (
-                    <>
-                        <UserOption type={USER_PROFILE} />
-                        <UserOption type={USER_SETTINGS} />
-                        <UserOption type={USER_LOGOUT} />
-                    </>
-                ) : (
-                    <UserOption type={USER_LOGIN} />
+        <>
+            <nav
+                className={clsx(
+                    "mt-1 absolute bg-black-secondary w-full rounded-md px-2 transition-all",
+                    {
+                        "hidden ": !isUserMenuOpen,
+                        "block ": isUserMenuOpen,
+                    }
                 )}
-            </ul>
-        </nav>
+            >
+                <ul>
+                    {isLogged ? (
+                        <>
+                            <UserOption type={USER_PROFILE} />
+                            <UserOption type={USER_SETTINGS} />
+                            <UserOption type={USER_LOGOUT} />
+                        </>
+                    ) : (
+                        <UserOption type={USER_LOGIN} />
+                    )}
+                </ul>
+            </nav>
+        </>
     );
 }

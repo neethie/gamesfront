@@ -4,7 +4,7 @@ import HeaderSection from "../../../utils/HeaderSection";
 export default function PopularGames() {
     return (
         <section className="py-4">
-            <HeaderSection text="Más populares" url="/games" />
+            <HeaderSection text="Más populares" url="/store" />
             <main className="grid grid-cols-3 gap-x-6">
                 <GameCard />
                 <GameCard />

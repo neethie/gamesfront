@@ -18,6 +18,8 @@ export default {
                 },
                 black: {
                     main: "#141415",
+                    darkgray: "#211f24",
+                    lightgray: "#c0c0c0",
                 },
             },
             backgroundColor: {
@@ -37,6 +39,8 @@ export default {
                 black: {
                     main: "#141415",
                     secondary: "#28242c",
+                    darkgray: "#211f24",
+                    lightgray: "#c0c0c0",
                 },
             },
             borderColor: {
@@ -56,6 +60,8 @@ export default {
                 black: {
                     main: "#141415",
                     secondary: "#28242c",
+                    darkgray: "#211f24",
+                    lightgray: "#c0c0c0",
                 },
             },
         },
